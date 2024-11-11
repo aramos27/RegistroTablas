@@ -1,0 +1,99 @@
+/* General styling for body and fonts */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Navigation bar styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Header styling */
+h1 {
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Controls for file upload and buttons */
+#controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling specific to data tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9f7ef;
+}
+
+/* Section headers for different table types */
+h2 {
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Button styling for the page */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Styling the file input field */
+input[type="file"] {
+    margin-right: 10px;
+}

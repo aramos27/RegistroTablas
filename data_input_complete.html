@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas Completas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tablas Completas</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="data_display.html">Visualizar Tablas</a></li>
+        </ul>
+    </nav>
+
+    <h1>Ingrese Datos de la Tabla</h1>
+
+    <!-- Table Section: Semanal -->
+    <h2>Tabla Semanal</h2>
+    <label>Nombre de la tabla:</label>
+    <input type="text" id="semanalImpuestoName" placeholder="Texto">
+    <br>
+    <label>ID de la tabla:</label>
+    <input type="text" id="semanalImpuestoId" placeholder="ID">
+    <h3>Impuestos</h3>
+    <table id="semanalImpuestoTable" border="1">
+        <tr>
+            <th>Límite inferior</th>
+            <th>Límite superior</th>
+            <th>Cuota Fija</th>
+            <th>Porcentaje excedente</th>
+        </tr>
+        <tr>
+            <td><input type="number" name="lim_inf"></td>
+            <td><input type="number" name="lim_sup" oninput="updateNextRowValue('semanalImpuestoTable', this, 0)"></td>
+            <td><input type="number" name="cuota_fija"></td>
+            <td><input type="number" name="porcentaje_excedente"></td>
+        </tr>
+    </table>
+    <button onclick="addRow('semanalImpuestoTable')">Agregar fila</button>
+    <button onclick="removeRow('semanalImpuestoTable')">Eliminar fila</button>
+    <br><br>
+
+    <h3>Subsidio</h3>
+    <table id="semanalSubsidioTable" border="1">
+        <tr>
+            <th>Para Ingresos Desde</th>
+            <th>Para Ingresos Hasta</th>
+            <th>Subsidio al empleo</th>
+        </tr>
+        <tr>
+            <td><input type="number" name="ingresos_desde"></td>
+            <td><input type="number" name="ingresos_hasta" oninput="updateNextRowValue('semanalSubsidioTable', this, 0)"></td>
+            <td><input type="number" name="subsidio_empleo"></td>
+        </tr>
+    </table>
+    <button onclick="addRow('semanalSubsidioTable')">Agregar fila</button>
+    <button onclick="removeRow('semanalSubsidioTable')">Eliminar fila</button>
+
+    <!-- Table Section: Quincenal -->
+    <h2>Tabla Quincenal</h2>
+    <label>Nombre de la tabla:</label>
+    <input type="text" id="quincenalImpuestoName" placeholder="Texto">
+    <br>
+    <label>ID de la tabla:</label>
+    <input type="text" id="quincenalImpuestoId" placeholder="ID">
+    <h3>Impuestos</h3>
+    <table id="quincenalImpuestoTable" border="1">
+        <tr>
+            <th>Límite inferior</th>
+            <th>Límite superior</th>
+            <th>Cuota Fija</th>
+            <th>Porcentaje excedente</th>
+        </tr>
+        <tr>
+            <td><input type="number" name="lim_inf"></td>
+            <td><input type="number" name="lim_sup" oninput="updateNextRowValue('quincenalImpuestoTable', this, 0)"></td>
+            <td><input type="number" name="cuota_fija"></td>
+            <td><input type="number" name="porcentaje_excedente"></td>
+        </tr>
+    </table>
+    <button onclick="addRow('quincenalImpuestoTable')">Agregar fila</button>
+    <button onclick="removeRow('quincenalImpuestoTable')">Eliminar fila</button>
+    <br><br>
+
+    <h3>Subsidio</h3>
+    <table id="quincenalSubsidioTable" border="1">
+        <tr>
+            <th>Para Ingresos Desde</th>
+            <th>Para Ingresos Hasta</th>
+            <th>Subsidio al empleo</th>
+        </tr>
+        <tr>
+            <td><input type="number" name="ingresos_desde"></td>
+            <td><input type="number" name="ingresos_hasta" oninput="updateNextRowValue('quincenalSubsidioTable', this, 0)"></td>
+            <td><input type="number" name="subsidio_empleo"></td>
+        </tr>
+    </table>
+    <button onclick="addRow('quincenalSubsidioTable')">Agregar fila</button>
+    <button onclick="removeRow('quincenalSubsidioTable')">Eliminar fila</button>
+
+    <!-- Table Section: Mensual -->
+    <h2>Tabla Mensual</h2>
+    <label>Nombre de la tabla:</label>
+    <input type="text" id="mensualImpuestoName" placeholder="Texto">
+    <br>
+    <label>ID de la tabla:</label>
+    <input type="text" id="mensualImpuestoId" placeholder="ID">
+    <h3>Impuestos</h3>
+    <table id="mensualImpuestoTable" border="1">
+        <tr>
+            <th>Límite inferior</th>
+            <th>Límite superior</th>
+            <th>Cuota Fija</th>
+            <th>Porcentaje excedente</th>
+        </tr>
+        <tr>
+            <td><input type="number" name="lim_inf"></td>
+            <td><input type="number" name="lim_sup" oninput="updateNextRowValue('mensualImpuestoTable', this, 0)"></td>
+            <td><input type="number" name="cuota_fija"></td>
+            <td><input type="number" name="porcentaje_excedente"></td>
+        </tr>
+    </table>
+    <button onclick="addRow('mensualImpuestoTable')">Agregar fila</button>
+    <button onclick="removeRow('mensualImpuestoTable')">Eliminar fila</button>
+    <br><br>
+
+    <h3>Subsidio</h3>
+    <table id="mensualSubsidioTable" border="1">
+        <tr>
+            <th>Para Ingresos Desde</th>
+            <th>Para Ingresos Hasta</th>
+            <th>Subsidio al empleo</th>
+        </tr>
+        <tr>
+            <td><input type="number" name="ingresos_desde"></td>
+            <td><input type="number" name="ingresos_hasta" oninput="updateNextRowValue('mensualSubsidioTable', this, 0)"></td>
+            <td><input type="number" name="subsidio_empleo"></td>
+        </tr>
+    </table>
+    <button onclick="addRow('mensualSubsidioTable')">Agregar fila</button>
+    <button onclick="removeRow('mensualSubsidioTable')">Eliminar fila</button>
+
+    <!-- Table Section: Anual -->
+    <h2>Tabla Anual</h2>
+    <label>Nombre de la tabla:</label>
+    <input type="text" id="anualImpuestoName" placeholder="Texto">
+    <br>
+    <label>ID de la tabla:</label>
+    <input type="text" id="anualImpuestoId" placeholder="ID">
+    <h3>Impuestos</h3>
+    <table id="anualImpuestoTable" border="1">
+        <tr>
+            <th>Límite inferior</th>
+            <th>Límite superior</th>
+            <th>Cuota Fija</th>
+            <th>Porcentaje excedente</th>
+        </tr>
+        <tr>
+            <td><input type="number" name="lim_inf"></td>
+            <td><input type="number" name="lim_sup" oninput="updateNextRowValue('anualImpuestoTable', this, 0)"></td>
+            <td><input type="number" name="cuota_fija"></td>
+            <td><input type="number" name="porcentaje_excedente"></td>
+        </tr>
+    </table>
+    <button onclick="addRow('anualImpuestoTable')">Agregar fila</button>
+    <button onclick="removeRow('anualImpuestoTable')">Eliminar fila</button>
+
+    <!-- Export Button -->
+    <button onclick="exportTablesToJson()">Export All Tables as JSON</button>
+    <br><br>
+
+    <script src="scripts/script_complete.js"></script>
+</body>
+</html>
